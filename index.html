@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Interactive CFG → CNF → CYK Parser</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Interactive CFG → CNF Converter & CYK Visual Parser</h1>
+
+<button onclick="toggleDark()">🌙 Dark Mode</button>
+<button onclick="loadExample()">Example Grammar</button>
+
+<div class="card">
+
+<h3>Enter CFG Grammar</h3>
+<textarea id="grammar"></textarea>
+
+<h3>Input String</h3>
+<input id="string" placeholder="Enter string">
+
+<br><br>
+
+<button onclick="runParser()">Parse String</button>
+
+</div>
+
+<div id="loading" class="loading">Parsing...</div>
+
+<div id="error" class="error"></div>
+
+<div class="card">
+<h3>CNF Grammar</h3>
+<pre id="cnf"></pre>
+</div>
+
+<div class="card">
+<h3>Result</h3>
+<div id="result"></div>
+</div>
+
+<div class="card">
+<h3>CYK Parsing Table</h3>
+<div id="table"></div>
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+<script src="/static/table.js"></script>
+
+</body>
+</html>
